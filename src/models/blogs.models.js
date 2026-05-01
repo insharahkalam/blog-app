@@ -7,7 +7,15 @@ const blogSchema = new mongoose.Schema({
     },
     description: {
         type: String,
-        required: true
+        required: true,
+    },
+    category: {
+        type: String,
+        required: true,
+    },
+    authors: {
+        type: String,
+        required: true,
     }
 });
 

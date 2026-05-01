@@ -12,7 +12,6 @@ app.use(express.json())
 
 connectDB()
 
-
 app.use('/api/blog', router)
 
 app.listen(process.env.PORT, () => {
