@@ -12,11 +12,25 @@ app.use(express.json())
 
 connectDB()
 
-app.get('/', (req, res) => {
+app.get("/", (req, res) => {
     res.json({
-        message: "please follow this endpoints: 1. /jwt 2. /ssr 3. csr 4. mongoose 5. schema 6. mvc 7. bcrypt 8. middleware"
-    })
-})
+        success: true,
+        message: "Backend API is running",
+        baseRoute: "/api/blog/get",
+        endpoints: [
+            "jwt",
+            "ssr",
+            "csr",
+            "mongoose",
+            "schema",
+            "mvc",
+            "bcrypt",
+            "middleware"
+        ],
+        usage: "Combine baseRoute + endpoint → /api/blog/get/jwt"
+    });
+});
+
 
 app.use('/api/blog', router)
 
